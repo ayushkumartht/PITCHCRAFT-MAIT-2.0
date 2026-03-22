@@ -1,0 +1,164 @@
+/* Settings Page - Minimal Government Style */
+
+.settings-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-xl);
+    background: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.settings-header h1 {
+    font-size: var(--text-xl);
+    margin: 0;
+}
+
+.settings-main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+    .settings-main {
+        padding: var(--space-md);
+    }
+}
+
+/* Section */
+.settings-section {
+    background: #FFFFFF;
+    border-radius: var(--radius-sm);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    border: 1px solid #E0E0E0;
+}
+
+.settings-section .section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid #F0F0F0;
+    color: var(--primary);
+    text-align: left;
+}
+
+.settings-section .section-header h2 {
+    font-size: var(--text-lg);
+    margin: 0;
+}
+
+.settings-section .section-header h2::after {
+    display: none;
+}
+
+/* Profile Form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.profile-form .btn {
+    margin-top: var(--space-md);
+    align-self: flex-start;
+}
+
+/* Settings List */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background: #FAFAFA;
+    border-radius: var(--radius-sm);
+    border: none;
+    width: 100%;
+    font-family: var(--font-hindi);
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    border: 1px solid #F0F0F0;
+}
+
+.setting-item.clickable {
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+}
+
+.setting-item.clickable:hover {
+    border-color: var(--primary);
+}
+
+.setting-item.danger {
+    color: var(--danger);
+}
+
+.setting-item.danger:hover {
+    border-color: var(--danger);
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    background: #E0E0E0;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.theme-toggle.active,
+.theme-toggle.dark {
+    background: var(--primary);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: transform var(--transition-fast);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle.active .toggle-thumb,
+.theme-toggle.dark .toggle-thumb {
+    transform: translateX(22px);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .settings-section {
+        padding: var(--space-md);
+    }
+
+    .setting-item {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+}
